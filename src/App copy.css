@@ -6,13 +6,13 @@ html {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #FFFFE0;
+  background-color: #E8EDFF;
 }
 
 .App {
   height: 100%;
   width: 100%;
-  background: #FFFFE0;
+  background:#E8EDFF;
 }
 
 .app-container {
@@ -22,7 +22,6 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #FFFFE0;
 }
 
 .app-container>div {
@@ -48,20 +47,9 @@ html {
   overflow: hidden;
 }
 
-.shopper-name {
-  margin-Left: 3%;
-  margin-Right: 55%;
-  font-Size: 350%;
-}
-
-.items {
-  font-Family: aial;
-  font-Size: 220%;
-}
-
 .menu {
   position: fixed;
-  top: 7.5%;
+  top: 7.8%;
   right: 0;
   background: #FFFFE0;
   color: #1f2329;
@@ -71,7 +59,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1% 0 1.5% 0;
+  margin: 1% 0 1% 0;
   overflow: hidden;
 }
 
@@ -85,11 +73,11 @@ html {
 
 #add-item-btn-main {
   margin-left: 5%;
-  font-size: 120%;
+  font-size: 100%;
   font-weight: bold;
   border-radius: 4px;
-  border-width: 4px;
-  border: outset;
+  border-width: 4px ;
+  border:outset ;
   border-color: #EAE7E2;
   color: red;
   cursor: pointer;
@@ -131,19 +119,18 @@ html {
   text-align: center;
   width: 42%;
   height: 65%;
-  font-size: 200%;
+  font-size: 90%;
   border-radius: 3px;
   color: #2e3131;
 }
 
-
 .content {
   position: fixed;
-  top: 17%;
+  top: 17.8%;
   right: 0;
   flex-flow: column;
   background: #FFFFEB;
-  height: 77%;
+  height: 76%;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -153,8 +140,8 @@ html {
   padding: 0.5%;
   display: flex;
   flex-flow: row;
-  width: 99%;
-  height: 8.1%;
+  width: 100%;
+  height: 8.5%;
   border-bottom: 0.3px solid #ededed;
   background-color: #123751;
 }
@@ -212,25 +199,6 @@ html {
   overflow-x: hide;
 }
 
-.item-name {
-  font-Size: 100%;
-  margin-Left: 5%;
-  margin-Right: 2%;
-  color: white;
-}
-
-.item-store {
-  font-Size: 90%;
-  margin-Left: 6%;
-  margin-Right: 6%;
-  color: #F9B932;
-}
-.item-from{
-  font-Size: 50%;
-  margin-Left: 2%;
-  color: white;
-}
-
 .counter {
   background: #123751;
   width: 25%;
@@ -284,7 +252,7 @@ html {
   right: 0;
   margin-top: 0.8%;
   background-color: #123751;
-  height: 5.5%;
+  height: 5%;
   color: white;
   border-radius: 0 0 0 0;
   border-radius: 0 0 15px 15px;
@@ -328,7 +296,7 @@ html {
 }
 
 .form-in {
-  border: 5px groove #E8EDFF;
+  border:5px groove #E8EDFF;
   height: 10%;
   line-Height: 6%;
   width: 80%;
@@ -350,10 +318,9 @@ html {
 }
 
 ::placeholder {
-  color: #C8C8C8;
+  color:	#C8C8C8;
   font-size: 120%;
-  opacity: 1;
-  /* Firefox */
+  opacity: 1; /* Firefox */
 }
 
 @media screen and (max-width: 319px) {
@@ -363,316 +330,192 @@ html {
 }
 
 @media screen and (min-width: 320px) and (max-width: 359px) {
+  .app-container {
+    width: 320px;
+    height: 568px;
+  }
+
   .header {
+    height: 6%;
     border-radius: 0;
-    line-height: 270%;
-  }
-
-  .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 37%;
-    font-Size: 140%;
-  }
-
-  .items {
-    font-Family: aial;
-    font-Size: 115%;
-  }
-
-  .menu {
-    height: 7%;
-  }
-
-  #add-item-btn-main {
-    font-size: 10px;
-  }
-
-  .form-input {
-    font-size: 100%;
-  }
-
-  .content {
-    height: 78%;
-    top: 15.7%;
-  }
-
-  .each-item {
-    height: 8.3%;
-  }
-
-  .item-name {
-    font-size: 150%;
-  }
-
-  .item-store {
-    font-size: 120%;
-  }
-
-  .footer {
-    border-radius: 0;
-  }
-
-}
-
-
-
-@media screen and (min-width: 360px) and (max-width: 374px) {
-  .header {
-    border-radius: 0;
-    line-height: 270%;
-  }
-
-  .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 37%;
-    font-Size: 180%;
-  }
-
-  .items {
-    font-Family: aial;
-    font-Size: 115%;
-  }
-
-  .menu {
-    height: 7%;
-  }
-
-  .content {
-    height: 78%;
-    top: 15.7%;
-  }
-
-  .each-item {
-    height: 7.57%;
-  }
-
-  .form-input {
-    font-size: 100%;
-  }
-
-  .item-name {
-    font-size: 170%;
-  }
-
-  .item-store {
-    font-size: 130%;
-  }
-
-  .footer {
-    border-radius: 0;
-  }
-}
-
-@media screen and (min-width: 375px) and (max-width: 399px) {
-  .header {
-    border-radius: 0;
-    line-height: 350%;
-  }
-
-  .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 33%;
-    font-Size: 200%;
-  }
-
-  .items {
-    font-Family: aial;
-    font-Size: 130%;
-  }
-
-  .menu {
-    top: 7.2%;
-    height: 8%;
-  }
-
-  .form-input {
-    font-size: 100%;
-  }
-
-  .content {
-    height: 77.5%;
-    top: 15.8%;
-  }
-
-  .each-item {
-    height: 7.7%;
-  }
-
-  .item {
-    font-size: 160%;
-  }
-
-  .item-store {
-    font-size: 130%;
-  }
-
-  .footer {
-    border-radius: 0;
-  }
-
-}
-
-@media screen and (min-width: 400px) and (max-width: 411px) {
-  .header {
-    border-radius: 0;
-    height: 10%;
-    line-height: 400%;
-  }
-
-  .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 33%;
-    font-Size: 220%;
-  }
-
-  .items {
-    font-Family: aial;
-    font-Size: 130%;
-  }
-
-  .menu {
-    height: 7%;
-  }
-
-  .content {
-    height: 77.5%;
-    top: 15.7%;
-  }
-
-  .each-item {
-    height: 7.65%;
-  }
-
-  .form-input {
-    font-size: 100%;
-  }
-
-  .item {
-    font-size: 160%;
-  }
-
-  .item-store {
-    font-size: 130%;
-  }
-
-  .footer {
-    border-radius: 0;
-  }
-}
-
-@media screen and (min-width: 412px) and (max-width: 414px) {
-  .header {
-    border-radius: 0;
-    height: 10%;
-    line-height: 450%;
-  }
-
-  .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 30%;
-    font-Size: 220%;
-  }
-
-  .items {
-    font-Family: aial;
-    font-Size: 160%;
-  }
-
-  .menu {
-    top: 9.6%;
-    height: 9%;
-  }
-
-  .form-input {
-    font-size: 100%;
-  }
-
-  .content {
-    height: 74%;
-    top: 19%;
-  }
-
-  .each-item {
-    height: 8.27%;
-  }
-
-  .item {
-    font-size: 160%;
-  }
-
-  .item-store {
-    font-size: 130%;
-  }
-
-  .footer {
-    border-radius: 0;
-    height: 6.5%;
-  }
-
-}
-
-@media screen and (min-width: 415px) and (max-width:767px) {
-  .header {
-    border-radius: 0;
-    height: 10%;
-    line-height: 330%;
-  }
-
-  .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 40%;
-    font-Size: 200%;
-  }
-
-  .form-input {
-    font-size: 100%;
-  }
-
-  .item-name {
-    font-size: 70%;
-  }
-
-  .item-store {
+    width: 375px;
+    line-height: 300%;
     font-size: 60%;
   }
-  .item-from{
-    font-size: 30%;
-  }
 
-  .items {
-    font-Family: aial;
-    font-Size: 120%;
-  }
-
-  .item {
-    font-size: 40px;
+  .menu{
+    height:8%
   }
 
   #add-item-btn-main {
-    font-size: 100%;
+    border-width: 2px;
+  }
+
+  .content {
+    height: 75%;
+  }
+
+  .each-item {
+    width: 99%;
+    height: 9.9%;
+    margin: 0.45%;
+  }
+
+  .left-buttons {
+    width: 22.5%;
+  }
+
+  .close {
+    border-width: 2px;
+  }
+
+  .check {
+    border-width: 2px;
+  }
+
+  .item {
+    width: 50%;
+  }
+
+  .counter {
+    height: 100%;
+    width: 24%;
+  }
+
+  .button {
+    width: 35%;
+
+    border-width: 2px;
+  }
+
+  .footer {
+    border-radius: 0;
   }
 }
 
-
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 49%;
-    font-Size: 300%;
+@media screen and (min-width: 360px) and (max-width: 374px) {
+  .app-container {
+    width: 360px;
+    height: 640px;
   }
 
-  .items {
-    font-Family: aial;
-    font-Size: 220%;
-  }
-
-  .item {
-    font-size: 40px;
+  .header {
+    height: 5%;
+    border-radius: 0;
+    width: 375px;
+    line-height: 300%;
+    font-size: 60%;
   }
 
   #add-item-btn-main {
-    font-size: 220%;
+    border-width: 2px;
   }
 
+  .content {
+    height: 78%;
+  }
+
+  .each-item {
+    width: 99%;
+    height: 8.9%;
+    margin: 0.45%;
+  }
+
+  .left-buttons {
+    width: 22.5%;
+  }
+
+  .close {
+    border-width: 2px;
+  }
+
+  .check {
+    border-width: 2px;
+  }
+
+  .item {
+    width: 50%;
+  }
+
+  .counter {
+    height: 100%;
+    width: 24%;
+  }
+
+  .button {
+    width: 35%;
+
+    border-width: 2px;
+  }
+
+  .footer {
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 389px) {
+
+  .app-container {
+    width: 375px;
+    height: 667px;
+  }
+
+  .each-item {
+    width: 99%;
+    height: 8.8%;
+    margin: 0.45%;
+  }
+
+  .header {
+    padding: 0.3%;
+    height: 9%;
+    line-height: 600%;
+    font-size: 70%;
+    border-radius: 0;
+  }
+
+  .footer {
+    border-radius: 0;
+  }
+
+}
+
+@media screen and (min-width: 390px) and (max-width: 420px) {
+  .app-container {
+    width: 414px;
+    height: 736px;
+  }
+
+  .each-item {
+    height: 8.34%;
+  }
+
+  .header {
+    border-radius: 0;
+  }
+
+  .footer {
+    border-radius: 0;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    border-radius: 15px 15px 0 0;
+  }
+  .left-buttons {
+    width: 22.5%;
+  }
+  .item {
+    width: 50%;
+  }
+
+  .counter {
+    width: 24%;
+  }
+  
+  .footer {
+    border-radius: 0 0 15px 15px;
+  }
 }
