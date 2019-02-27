@@ -16,8 +16,6 @@ html {
 }
 
 .app-container {
-  width: 368px;
-  height: 624px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,6 +30,7 @@ html {
   overflow-x: hide;
 }
 
+
 .header {
   position: fixed;
   top: 0;
@@ -40,23 +39,24 @@ html {
   border-radius: 15px 15px 0 0;
   background-color: #123751;
   height: 7.5%;
-  width: 98%;
-  line-height: 550%;
+  width: 100%;
+  line-height: 7.5%;
   color: white;
+  flex-direction: row;
   display: flex;
-  flex-flow: row;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .shopper-name {
-  margin-Left: 3%;
-  margin-Right: 55%;
-  font-Size: 350%;
+  margin-right: 30%;
+  font-Size: 180%;
 }
 
 .items {
   font-Family: aial;
-  font-Size: 220%;
+  font-Size: 100%;
 }
 
 .menu {
@@ -67,7 +67,7 @@ html {
   color: #1f2329;
   height: 8%;
   width: 100%;
-  line-height: 15%;
+  line-height: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +85,7 @@ html {
 
 #add-item-btn-main {
   margin-left: 5%;
-  font-size: 120%;
+  font-size: 100%;
   font-weight: bold;
   border-radius: 4px;
   border-width: 4px;
@@ -131,11 +131,10 @@ html {
   text-align: center;
   width: 42%;
   height: 65%;
-  font-size: 200%;
+  font-size: 100%;
   border-radius: 3px;
   color: #2e3131;
 }
-
 
 .content {
   position: fixed;
@@ -147,6 +146,7 @@ html {
   width: 100%;
   justify-content: center;
   align-items: center;
+
 }
 
 .each-item {
@@ -225,7 +225,8 @@ html {
   margin-Right: 6%;
   color: #F9B932;
 }
-.item-from{
+
+.item-from {
   font-Size: 50%;
   margin-Left: 2%;
   color: white;
@@ -297,8 +298,7 @@ html {
   align-items: center;
   width: 300px;
   height: 400px;
-  background-color: #E8EDFF;
-  align-content: f;
+  background-color: #FFFFE0;
 }
 
 .sign-in-form {
@@ -317,11 +317,11 @@ html {
 }
 
 .form-lable {
-  height: 8%;
+  height: 5%;
   width: 90%;
   text-Align: left;
   margin-left: 14%;
-  margin-top: 10%;
+  margin-top: 8%;
   display: flex;
   justify-Content: flex-end;
   flex-Direction: column;
@@ -342,16 +342,22 @@ html {
   border-Radius: 3px;
   border: 4px outset #D64B34;
   color: white;
-  width: 40%;
-  height: 8%;
+  width: 50%;
+  height: 50%;
   font-Size: 70%;
-  margin-top: 10%;
+  margin-top:5%; 
+}
+.form-sign-up-btn:hover {
+  background-color: rgb(230, 221, 200);
+}
 
+.form-sign-up-btn:active {
+  transform: translateY(.1px);
 }
 
 ::placeholder {
   color: #C8C8C8;
-  font-size: 120%;
+  font-size: 160%;
   opacity: 1;
   /* Firefox */
 }
@@ -365,18 +371,16 @@ html {
 @media screen and (min-width: 320px) and (max-width: 359px) {
   .header {
     border-radius: 0;
-    line-height: 270%;
   }
 
   .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 37%;
-    font-Size: 140%;
+    margin-Right: 30%;
+    font-size: 160%;
   }
 
   .items {
     font-Family: aial;
-    font-Size: 115%;
+    font-size: 140%;
   }
 
   .menu {
@@ -385,10 +389,6 @@ html {
 
   #add-item-btn-main {
     font-size: 10px;
-  }
-
-  .form-input {
-    font-size: 100%;
   }
 
   .content {
@@ -419,18 +419,16 @@ html {
 @media screen and (min-width: 360px) and (max-width: 374px) {
   .header {
     border-radius: 0;
-    line-height: 270%;
   }
 
   .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 37%;
-    font-Size: 180%;
+    margin-Right: 30%;
+    font-size: 180%;
   }
 
   .items {
     font-Family: aial;
-    font-Size: 115%;
+    font-size: 120%;
   }
 
   .menu {
@@ -444,10 +442,6 @@ html {
 
   .each-item {
     height: 7.57%;
-  }
-
-  .form-input {
-    font-size: 100%;
   }
 
   .item-name {
@@ -466,27 +460,19 @@ html {
 @media screen and (min-width: 375px) and (max-width: 399px) {
   .header {
     border-radius: 0;
-    line-height: 350%;
   }
 
   .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 33%;
-    font-Size: 200%;
+    margin-Right: 30%;
   }
 
   .items {
     font-Family: aial;
-    font-Size: 130%;
   }
 
   .menu {
     top: 7.2%;
     height: 8%;
-  }
-
-  .form-input {
-    font-size: 100%;
   }
 
   .content {
@@ -515,19 +501,14 @@ html {
 @media screen and (min-width: 400px) and (max-width: 411px) {
   .header {
     border-radius: 0;
-    height: 10%;
-    line-height: 400%;
   }
 
   .shopper-name {
-    margin-Left: 3%;
-    margin-Right: 33%;
-    font-Size: 220%;
+    margin-Right: 30%;
   }
 
   .items {
     font-Family: aial;
-    font-Size: 130%;
   }
 
   .menu {
@@ -541,10 +522,6 @@ html {
 
   .each-item {
     height: 7.65%;
-  }
-
-  .form-input {
-    font-size: 100%;
   }
 
   .item {
@@ -564,27 +541,19 @@ html {
   .header {
     border-radius: 0;
     height: 10%;
-    line-height: 450%;
   }
 
   .shopper-name {
-    margin-Left: 3%;
     margin-Right: 30%;
-    font-Size: 220%;
   }
 
   .items {
     font-Family: aial;
-    font-Size: 160%;
   }
 
   .menu {
     top: 9.6%;
     height: 9%;
-  }
-
-  .form-input {
-    font-size: 100%;
   }
 
   .content {
@@ -611,21 +580,16 @@ html {
 
 }
 
-@media screen and (min-width: 415px) and (max-width:767px) {
+@media screen and (min-width: 415px) and (max-width:567px) {
   .header {
     border-radius: 0;
-    height: 10%;
-    line-height: 330%;
+    height: 7%;
+    line-height: 300%;
   }
 
   .shopper-name {
     margin-Left: 3%;
-    margin-Right: 40%;
-    font-Size: 200%;
-  }
-
-  .form-input {
-    font-size: 100%;
+    margin-Right: 30%;
   }
 
   .item-name {
@@ -635,44 +599,202 @@ html {
   .item-store {
     font-size: 60%;
   }
-  .item-from{
+
+  .item-from {
     font-size: 30%;
   }
 
   .items {
     font-Family: aial;
-    font-Size: 120%;
   }
 
   .item {
     font-size: 40px;
   }
 
-  #add-item-btn-main {
-    font-size: 100%;
+}
+
+@media screen and (min-width: 568px) and (max-width:667px) {
+  .header {
+    border-radius: 0;
+    height: 7%;
+    line-height: 280%;
+  }
+
+  .shopper-name {
+    margin-Left: 3%;
+    margin-Right: 30%;
+    font-size: 220%;
   }
 }
 
+@media screen and (min-width: 668px) and (max-width:767px) {
+  .header {
+    border-radius: 0;
+    height: 7%;
+    line-height: 280%;
+  }
 
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
   .shopper-name {
     margin-Left: 3%;
-    margin-Right: 49%;
-    font-Size: 300%;
+    margin-Right: 30%;
+    font-size: 200%;
+  }
+
+
+  .item-name {
+    font-size: 70%;
+  }
+
+  .item-store {
+    font-size: 60%;
+  }
+
+  .item-from {
+    font-size: 30%;
   }
 
   .items {
     font-Family: aial;
-    font-Size: 220%;
+  }
+
+  .item {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 867px) {
+  .header {
+    height: 8%;
+  }
+
+  .shopper-name {
+    margin-Right: 30%;
+    font-size: 280%;
+  }
+
+  .items {
+    font-Family: aial;
+    font-size: 220%;
   }
 
   .item {
     font-size: 40px;
   }
 
-  #add-item-btn-main {
+}
+
+@media screen and (min-width: 868px) and (max-width: 920px) {
+  .header {
+    height: 8%;
+  }
+
+  .shopper-name {
+    font-size: 280%;
+  }
+
+  .items {
+    font-Family: aial;
     font-size: 220%;
   }
 
+  .item {
+    font-size: 40px;
+  }
+
+}
+
+@media screen and (min-width: 921px) and (max-width: 1024px) {
+  .header {
+    height: 8%;
+  }
+
+  .shopper-name {
+    margin-Right: 30%;
+    font-size: 280%;
+  }
+
+  .items {
+    font-Family: aial;
+    font-size: 200%;
+  }
+
+  .item {
+    font-size: 40px;
+  }
+
+
+}
+
+@media screen and (min-width: 1025px) {
+
+  body,
+  html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .shopper-name {
+    margin-Right: 30%;
+    font-size: 200%;
+  }
+
+  .items {
+    font-size: 160%;
+  }
+  .item {
+    font-size: 40px;
+  }
+
+
+  .app {
+    width: 624px;
+    height: 1024px;
+  }
+
+  .app-container {
+    width: 624px;
+    height: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-container>div {
+    width: 50%;
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hide;
+  }
+
+  .menu {
+    top: 6%;
+  }
+
+  .header,
+  .menu {
+    width: 50%;
+    left: 25%;
+  }
+
+  .content {
+    top: 16%;
+    height: 78%;
+    width: 50%;
+    left: 25%;
+  }
+
+  .footer {
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+  }
+
+  .each-item {
+    height: 8.85%;
+  }
 }
