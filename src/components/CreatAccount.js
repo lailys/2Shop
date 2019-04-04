@@ -65,9 +65,9 @@ queryChangeId = (key,word) => {
                 sm={2}
                 className="form-lable"
                 style={{
-                marginTop: "3%"
+                marginTop: "2%",
             }}>
-                Email@
+                Email:
             </Form.Label>
 
             <Form.Control type="email" placeholder="Email" className="form-in"
@@ -89,7 +89,7 @@ queryChangeId = (key,word) => {
                display: "flex",
                justifyContent: "center",
                alignItems: "center",
-               textDecoration:"none"
+               textDecoration:"none",
             }}>
                 <Button type="submit" className="form-sign-up-btn" 
                 onClick={(e)=>this.addCostumer(e.target.value)}
