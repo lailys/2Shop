@@ -2,11 +2,16 @@
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.9.0"
+  },
   "dependencies": {
     "aws-amplify": "^1.1.21",
     "bootstrap": "^4.3.1",
     "escape-string-regexp": "^1.0.5",
     "form-serialize": "^0.7.2",
+    "heroku": "^7.22.9",
     "rc-swipeout": "^2.0.11",
     "react": "^16.8.2",
     "react-bootstrap": "^1.0.0-beta.5",
