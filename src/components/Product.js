@@ -15,13 +15,11 @@ const Product = (props) => {
                             <div className="left-buttons">
                                 <Button
                                     aria-label="Close"
-                                    className="x-button"
                                     id="close"
                                     onClick={(e) => props.removeProduct(product.name)}>X</Button>
                                 <Button
                                     id="check"
                                     aria-label="Checkmark"
-                                    className="x-button"
                                     onClick={(e) => props.checkMark(product.sign, i)}>
                                     {product.sign}
                                 </Button>

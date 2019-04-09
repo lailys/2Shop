@@ -2,9 +2,8 @@ import React, {Component} from 'react';
 import './App.css';
 import {Route} from 'react-router-dom';
 import Container from './components/Container';
-import CreatAccount from './components/CreatAccount';
 import {Form, Button} from 'react-bootstrap';
-import {Link} from 'react-router-dom'
+
 import escapeRegExp from 'escape-string-regexp';
 import { LinkContainer } from "react-router-bootstrap";
 
@@ -90,36 +89,26 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="App" >
                 <Route
                     exact
                     path='/'
                     render={() => (
                     <div className="sign-in">
                         <Form className="sign-in-form">
-                            <Form.Label
-                                column
-                                sm={2}
-                                className="form-lable"
-                                style={{
-                                marginTop: "3%"
-                            }}>
-                                Email@
-                            </Form.Label>
+                         
                             <Form.Control
                                 type="email"
-                                placeholder="Email"
+                                placeholder="Email..."
                                 className="form-in"
                                 required="required"
                                 value={this.state.queryEmail}
                                 name="email"
                                 onChange={(e) => this.queryChangeEmail("newEmail", e.target.value)}/>
-                            <Form.Label column sm={2} className="form-lable">
-                                Name:
-                            </Form.Label>
+                        
                             <Form.Control
                                 type="name"
-                                placeholder="Name"
+                                placeholder="Name..."
                                 className="form-in"
                                 required="required"
                                 value={this.state.queryId}
@@ -128,11 +117,6 @@ class App extends Component {
                             <LinkContainer 
                                 to="/your-list"
                                 style={{
-                                width: "80%",
-                                height: "20%",
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
                                 textDecoration: "none"
                             }}>
                                 <Button

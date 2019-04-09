@@ -144,12 +144,18 @@ class Container extends Component {
 
                 <div fluid className="header" >
 
-                    <div className="shopper-name">{this.props.clientName}'s list</div>
+                    <div className="shopper-name"><span
+                    style={{
+                        color: "#005DA5",
+                        fontWeight:"",
+                        marginRight: "1.5vw"
+                        
+                    }}>{this.props.clientName}</span> 's list</div>
                     <div className="items">
                         <span
                             style={{
-                            color: "#AD3528",
-                            marginRight: "6%",
+                            color: "#005DA5",
+                            marginRight: ".4vw",
                             
                         }}>{this.state.product.length}</span>Items</div>
                 </div>
@@ -161,8 +167,7 @@ class Container extends Component {
                             aria-label="Add"
                             type="submit"
                           >
-                            +
-                        </Button>
+&#43;                        </Button>
                     </div>
 
                     <div className="form">
@@ -170,7 +175,7 @@ class Container extends Component {
                         <Form.Control
                             className="form-input"
                             type="text"
-                            placeholder="product"
+                            placeholder="Product..."
                             style={{
                             marginRight: "4%"
                         }}
@@ -181,7 +186,7 @@ class Container extends Component {
                         <Form.Control
                             className="form-input"
                             type="text"
-                            placeholder="store"
+                            placeholder="Store..."
                             value={this.state.queryStore}
                             onChange={(e) => this.queryChangeStore("newStore", e.target.value)}/>
 

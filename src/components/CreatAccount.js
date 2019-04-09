@@ -70,7 +70,7 @@ queryChangeId = (key,word) => {
                 Email:
             </Form.Label>
 
-            <Form.Control type="email" placeholder="Email" className="form-in"
+            <Form.Control type="email" placeholder="Email..." className="form-in"
             required="required" value={this.state.queryEmail}  name="email"
             onChange={(e) => this.queryChangeEmail("newEmail",e.target.value)}/>
 
@@ -78,7 +78,7 @@ queryChangeId = (key,word) => {
                 Name:
             </Form.Label>
 
-            <Form.Control type="name" placeholder="Name" className="form-in"
+            <Form.Control type="name" placeholder="Name..." className="form-in"
             required="required" value={this.state.queryId} name="name"
             onChange={(e) => this.queryChangeId("newName",e.target.value)}/>
             <Link  
