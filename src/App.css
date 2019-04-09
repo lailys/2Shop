@@ -113,7 +113,7 @@
 
   .menu {
     margin: 0 .4vh .4vh .4vh;
-    background-color: #FFDDD3;
+    background-color: #73A6CD;
     height: 8vh;
     width: 99vw;
     color: #fdf7f6;
@@ -134,9 +134,9 @@
   }
   
   #add-item-btn-main {
- background-color: #FFDDD3;
+ background-color: #73A6CD;
     border:.2vw solid #FFDDD3;
-    color:rgb(238, 181, 163);
+    color:#FFDDD3;
     cursor: pointer;
     box-shadow: .08vh .08vh .2vh .2vh #dbb9b2;
     display: flex;
@@ -153,7 +153,7 @@
   }
   
   #add-item-btn-main:hover {
-    background-color: rgb(250, 208, 195);
+    background-color: rgb(149, 186, 214);
     color: #faece9;
   }
   
@@ -199,13 +199,13 @@
     position: absolute;
     bottom: 8.6vh;
     height: 75vh;
-    width: 98vw;
+    width: 96vw;
     overflow-y: scroll;
     overflow-x: hidden;
   
   }
   .each-item {
-    background-color: #FFDDD3;
+    background-color: white;
     display: flex;
     margin-bottom: 1vh;
     align-items: center;
@@ -340,7 +340,7 @@
 
   .button.add {
     color: #faece9;
-    box-shadow: .1vh .1vh .1vh .1vh #e6c6bf;
+    box-shadow: .1vh .1vh .1vh .1vh rgb(223, 169, 156);
     cursor: pointer; 
     display: flex;
     justify-content: center;
@@ -356,7 +356,7 @@
 
   .button.subtract {
     color: #faece9;
-    box-shadow: .1vh .1vh .1vh .1vh #e6c6bf;
+    box-shadow: .1vh .1vh .1vh .1vh #73A6CD;
     cursor: pointer; 
     display: flex;
     justify-content: center;
