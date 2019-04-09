@@ -113,7 +113,7 @@
 
   .menu {
     margin: 0 .4vh .4vh .4vh;
-    background-color: #73A6CD;
+    background-color: rgb(222, 237, 248);
     height: 8vh;
     width: 99vw;
     color: #fdf7f6;
@@ -134,9 +134,9 @@
   }
   
   #add-item-btn-main {
- background-color: #73A6CD;
+ background-color: rgb(222, 237, 248);
     border:.2vw solid #FFDDD3;
-    color:#FFDDD3;
+    color:#BA4528;
     cursor: pointer;
     box-shadow: .08vh .08vh .2vh .2vh #dbb9b2;
     display: flex;
@@ -172,7 +172,7 @@
   
   .form-input {
 
-    border:.2vw solid #FFDDD3;
+    border:.2vw solid rgb(222, 237, 248);
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
