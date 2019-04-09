@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 7.5vw;
+    font-size: 5.5vh;
     opacity: 0.3;
    color: #727077;
     font-family: "Thasadith", sans-serif;
@@ -205,7 +205,7 @@
   
   }
   .each-item {
-    background-color: white;
+    background-color: rgb(250, 217, 209);
     display: flex;
     margin-bottom: 1vh;
     align-items: center;
@@ -248,6 +248,7 @@
     height: 100%;
     width: 40%;
     border:none;
+    background: rgb(250, 217, 209);
     
   }
   
@@ -264,6 +265,7 @@
     height: 100%;
     width: 40%;
     border:none;
+    background: #F9C1B4;
   }
   #check:hover{
     background-color: #FFDDD3;  
@@ -415,4 +417,24 @@
   .signout:active {
     transform: translateY(0.1vh);
   }
-  
+  @media only screen and (min-width:768px ) and (max-width: 3000px){
+    .sign-in-form {
+        width: 400px;
+        height:360px;
+       
+      }
+      .sign-in-form ::placeholder {
+        font-size: 5.5vh;
+      }
+    
+    
+    }
+    @media only screen and (max-width: 319px){
+        .App{
+          display: none;
+        }
+        .app-container {
+            display: none;
+          }
+        }
+        
