@@ -14,7 +14,12 @@ class App extends Component {
         clientEmail: "",
         clients: [],
         queryId: "",
-        queryEmail: ""
+        queryEmail: "",
+        moved: false,
+        X: 0,
+        p: "",
+       
+       
     }
 
     componentDidMount() {
@@ -86,6 +91,8 @@ class App extends Component {
             return {queryId: "", queryEmail: ""}
         })
     }
+
+    
 
     render() {
         return (

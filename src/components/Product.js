@@ -1,8 +1,10 @@
-import React from 'react';
-import escapeRegExp from 'escape-string-regexp';
-import {Form, Button} from 'react-bootstrap';
+import React, {Component} from 'react'
+import {Button} from 'react-bootstrap';
 
-const Product = (props) => {
+function Product(props) {
+
+   
+    
     return (
         <div className="content">
             {props
@@ -11,12 +13,23 @@ const Product = (props) => {
                 .map((product, i) => {
                     return (
 
-                        <div key={i} className="each-item">
-                            <div className="left-buttons">
-                                <Button
-                                    aria-label="Close"
-                                    id="close"
-                                    onClick={(e) => props.removeProduct(product.name)}>X</Button>
+                        <div key={i} className="each-item"
+                        style={{
+                           top:String(i*7.68)+"vh",
+                           left:product.left1+"vw",
+                           transition: "left .7s",
+                         }} 
+                         onMouseDown={e => props.startswipe1(e,i)}
+                         onMouseMove={e => props.moveswipe1(e,i)}
+                         onMouseUp={e => props.stopMove1(e,i)}
+                      
+                         >
+                           <div className="swipe1"
+                             >
+                      
+                           
+                           
+                           <div className="left-buttons">
                                 <Button
                                     id="check"
                                     aria-label="Checkmark"
@@ -24,15 +37,18 @@ const Product = (props) => {
                                     {product.sign}
                                 </Button>
                             </div>
-
-                            <div className="item">
+                            <div className="item"
+                           
+                            >
+                            
                                 <span className="item-name">{product.name}</span>
                                 <span className="item-from">from</span>
                                 <span className="item-store">
                                     {product.store}
                                 </span >
-                            </div>
-                            <div className="counter">
+                                </div>
+                                <div className="counter"
+                                >
                                 <Button
                                     aria-label="Remove"
                                     className="button subtract"
@@ -47,8 +63,16 @@ const Product = (props) => {
                                     +
                                 </Button>
                             </div>
-                            <div className="under-border"></div>
 
+                            </div>
+                            <div className="swipe2"
+                                   
+                              >
+     <Button
+                                    aria-label="Close"
+                                    id="close"
+                                    onClick={(e) => props.removeProduct(product.name)}>X</Button>
+                            </div>
                         </div>
                     )
                 })}

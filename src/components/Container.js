@@ -18,7 +18,14 @@ class Container extends Component {
         queryStore: "",
         addName: "",
         addStore: "",
-        sign: ""
+        sign: "",
+        left1: "0",
+        x: 0, 
+        startX: 0,
+        moved:0,
+        transition: "left .7s",
+        p:0
+       
     }
 
     componentDidMount() {
@@ -67,7 +74,6 @@ class Container extends Component {
     }
 
     removeProduct = (name) => {
-        const product = [...this.state.product]
         const updatedProduct = this
             .state
             .product
@@ -95,16 +101,29 @@ class Container extends Component {
     onSubmit = async(e) => {
         e.preventDefault();
 
-        console.log(this.props.clientName)
-
+       
         const addedItem = this.state.queryName;
         const addedStore = this.state.queryStore;
         const addedSign = this.state.sign;
+        const addedMoved=this.state.moved
+        const addedTransition=this.state.transition
+        const addedStartX=this.state.startX
+        const addedP=this.state.p
+        const addedX=this.state.x
+        const addedLeft=this.state.left1
+
         let obj = {
             'name': addedItem,
             'counts': 0,
             'store': addedStore,
-            'sign': addedSign
+            'sign': addedSign,
+            'moved':addedMoved,
+            'transition':addedTransition,
+            'startX':addedStartX,
+            'p':addedP,
+            'x':addedX,
+            'left1':addedLeft
+            
         };
 
         const product = [...this.state.product]
@@ -125,7 +144,7 @@ class Container extends Component {
     }
 
     checkMark = (sign, i) => {
-
+console.log(this.state.product[i])
         if (sign === "") {
             this.state.product[i].sign = "\u2713"
             this.setState(this.state)
@@ -135,6 +154,54 @@ class Container extends Component {
         }
 
     }
+
+
+
+    startswipe1 = (e,i) => {
+        console.log(this.state.product[i])
+        if(this.state.product[i].moved===0){
+            this.state.product[i].moved=1
+            this.state.product[i].startX=e.clientX
+            this.setState(this.state)
+        }
+      
+      };
+
+    moveswipe1 = (e,i)=> {
+        
+        console.log(this.state.product[i])
+        if (this.state.product[i].moved===1) {
+            this.state.product[i].p=e.clientX-this.state.product[i].startX
+            if(this.state.product[i].p<0){
+                console.log("yey")
+                this.state.product[i].left1="-8"
+                this.setState(this.state) 
+                 
+            }else if(this.state.product[i].p>0){
+                console.log("yey")
+                this.state.product[i].left1="0"
+        this.setState(this.state) 
+            }
+           
+            window.setTimeout(() => this. stopswipe1(e,i), 7000);     
+    }
+       
+    }
+
+    stopswipe1 = (e,i) => {
+        this.state.product[i].left1="0"
+        this.setState(this.state)  
+      };
+   
+    stopMove1 = (e,i) => {
+        this.state.product[i].moved=0
+        this.state.product[i].p=0
+        this.state.product[i].x=0
+        this.state.product[i].startX=0
+        this.setState(this.state)  
+  };
+
+
 
     render() {
 
@@ -175,7 +242,7 @@ class Container extends Component {
                         <Form.Control
                             className="form-input"
                             type="text"
-                            placeholder="Product..."
+                            placeholder="Product"
                             style={{
                             marginRight: "4%"
                         }}
@@ -186,7 +253,7 @@ class Container extends Component {
                         <Form.Control
                             className="form-input"
                             type="text"
-                            placeholder="Store..."
+                            placeholder="Store"
                             value={this.state.queryStore}
                             onChange={(e) => this.queryChangeStore("newStore", e.target.value)}/>
 
@@ -200,7 +267,12 @@ class Container extends Component {
                     checkMark={this.checkMark}
                     countSubtract={this.countSubtract}
                     countAdd={this.countAdd}
-                    all={this.state.all}/>
+                    all={this.state.all}
+                    startswipe1= {this.startswipe1}
+                    moveswipe1= {this.moveswipe1}
+                    stopMove1= {this.stopMove1}
+                   />
+
 
                 <div className="footer"><Button className="signout"><div >Sign Out</div></Button></div>
             </div>
