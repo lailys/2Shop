@@ -98,7 +98,7 @@
 .shopper-name {
   color: #ffffff;
   font-family: "Codystar", cursive;
-  font-size: 4vh;
+  font-size: 5.8vw;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -112,7 +112,7 @@
   justify-content: center;
   color: #fdf7f6;
   font-family: "Thasadith", sans-serif;
-  font-size: 2vh;
+  font-size: 3.8vw;
   overflow: hidden;
   width: 18vw;
   height: 5vh;
@@ -167,6 +167,7 @@
 }
 
 .form {
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -449,20 +450,50 @@
 .signout:active {
   transform: translateY(0.1vh);
 }
+@media only screen and (min-width: 450px) and (max-width: 709px) {
+  .shopper-name {
+    font-size: 3.8vw;
+  }
+  
+  .items {
+    font-size: 2vw;
+  }
+}
 
-@media only screen and (min-width: 768px) and (max-width: 3000px) {
+
+@media only screen and (min-width: 710px) and (max-width: 1000px) {
+  
+  .item-from {
+    font-size: 1vw;
+  }
   .sign-in-form {
     width: 400px;
     height: 361px;
   }
-
+  .form-in {
+    width:80%;
+  }
+  .form-sign-up-btn {
+    width:60%;
+  }
   .sign-in-form ::placeholder {
     font-size: 5.5vh;
   }
   .item {
     width: 70vw;
   }
+  .shopper-name {
+  
+    font-size: 2.8vw;
+  }
+  
+  .items {
+    font-size: 1.4vw;
+  }
 
+.items {
+  width: 18%;
+}
   .counter {
     width: 14vw;
     height: 95%;
@@ -493,19 +524,102 @@
  
 
 }
-@media only screen and (min-width: 768px) and (max-width: 3000px) {
+
+@media only screen and (min-width: 1001px) and (max-width: 1600px) {
+  .item-from {
+    font-size: 1vw;
+  }
   .sign-in-form {
     width: 400px;
     height: 361px;
   }
-
+  .form-in {
+    width:80%;
+  }
+  .form-sign-up-btn {
+    width:60%;
+  }
   .sign-in-form ::placeholder {
     font-size: 5.5vh;
   }
   .item {
     width: 70vw;
   }
+  .shopper-name {
+    
+    font-size: 2.6vw;
+  }
+  
+  .items {
+    font-size: 1vw;
+  }
 
+.items {
+  width: 18%;
+}
+  .counter {
+    width: 14vw;
+    height: 95%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  .left-buttons {
+   
+    width: 4vh;
+  }
+  .button.add {
+    width: 4.2vh;
+  }
+  
+  .button.subtract {
+    width: 4.2vh;
+  }
+  
+  .counts {
+    width: 10vh;
+    font-size: 3vh;
+  }
+  
+ 
+
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 2400px) {
+  .item-from {
+    font-size: 1vw;
+  }
+  .sign-in-form {
+    width: 400px;
+    height: 361px;
+  }
+  .form-in {
+    width:80%;
+  }
+  .form-sign-up-btn {
+    width:60%;
+  }
+  .sign-in-form ::placeholder {
+    font-size: 5.5vh;
+  }
+  .item {
+    width: 70vw;
+  }
+  .shopper-name {
+   
+    font-size: 2.4vw;
+  }
+  
+  .items {
+    font-size: .8vw;
+  }
+
+.items {
+  width: 18%;
+}
   .counter {
     width: 14vw;
     height: 95%;
