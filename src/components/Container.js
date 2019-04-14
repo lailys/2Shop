@@ -3,7 +3,7 @@ import escapeRegExp from 'escape-string-regexp';
 import {Form, Button} from 'react-bootstrap';
 import Product from './Product'
 
-const i = 0;
+
 
 class Container extends Component {
 
@@ -53,9 +53,7 @@ class Container extends Component {
         }
     }
     saveStateToLocalStorage() {
-        // for every item in React state
         for (let key in this.state) {
-            // save to localStorage
             localStorage.setItem(key, JSON.stringify(this.state[key]));
         }
     }

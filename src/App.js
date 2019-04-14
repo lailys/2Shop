@@ -56,8 +56,11 @@ class App extends Component {
     }
 
     queryChangeEmail = (key, word) => {
+        console.log(word)
+        
+const final=word.replace(/\//, "")
         this.setState(() => {
-            return {queryEmail: escapeRegExp(word)}
+            return {queryEmail: final}
         })
         localStorage.setItem(key, word);
     }
@@ -102,7 +105,7 @@ class App extends Component {
                     path='/'
                     render={() => (
                     <div className="sign-in">
-                        <Form className="sign-in-form">
+                        <form className="sign-in-form">
                          
                             <Form.Control
                                 type="email"
@@ -133,7 +136,7 @@ class App extends Component {
                                     Sign in
                                 </Button>
                             </LinkContainer>
-                        </Form>
+                        </form>
                     </div>
                 )}/>
 

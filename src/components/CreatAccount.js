@@ -60,23 +60,11 @@ queryChangeId = (key,word) => {
         <div className="sign-in">
         <Form className="sign-in-form" >
 
-            <Form.Label
-                column
-                sm={2}
-                className="form-lable"
-                style={{
-                marginTop: "2%",
-            }}>
-                Email:
-            </Form.Label>
 
             <Form.Control type="email" placeholder="Email..." className="form-in"
             required="required" value={this.state.queryEmail}  name="email"
             onChange={(e) => this.queryChangeEmail("newEmail",e.target.value)}/>
 
-            <Form.Label column sm={2} className="form-lable">
-                Name:
-            </Form.Label>
 
             <Form.Control type="name" placeholder="Name..." className="form-in"
             required="required" value={this.state.queryId} name="name"

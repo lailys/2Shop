@@ -31,7 +31,7 @@
   align-items: center;
   font-size: 4.5vh;
   opacity: 0.2;
-  color: red;
+  color: #ba4528;
   font-family: "Thasadith", sans-serif;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .form-sign-up-btn :active {
-  transform: translateY(0.1vh);
+  transform: translateY(.4vh);
 }
 
 .form-sign-up-btn :hover {
@@ -163,7 +163,7 @@
 }
 
 .add-item-btn:active {
-  transform: translateY(0.1vh);
+  transform: translateY(1vh);
 }
 
 .form {
@@ -233,8 +233,7 @@
 .swipe1 {
   margin-left: .5vw;
   margin-right: .5vw;
-  box-shadow: 0.05vh 0.05vh 0.16vh 0.16vh rgb(209, 217, 223);
- 
+  box-shadow: 0.05vh 0.05vh 0.16vh 0.16vh #ebdad7;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -336,8 +335,8 @@
 }
 
 .button.add {
-  color: #faece9;
-  box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh rgb(223, 169, 156);
+  color: white;
+  box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh rgb(218, 187, 179);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -348,12 +347,12 @@
   width: 50%;
   border: none;
 
-  background-color: #b44943;
+  background-color: #F9C1B4;
 }
 
 .button.subtract {
   color: #faece9;
-  box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh #73a6cd;
+  box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh #a7bac9;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -364,7 +363,7 @@
   width: 50%;
   border: none;
 
-  background-color: #004d88;
+  background-color: #73a6cd;
 }
 
 .counts {
@@ -392,7 +391,7 @@
 }
 
 #close {
-  color:rgb(224, 238, 248);
+  color:white;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -404,10 +403,10 @@
   width: 85%;
   border: none;
  
-  background:  #ba4528;
+  background:  #C8504A;
   font-family: "Thasadith", sans-serif;
   border-radius: 2px;
-  box-shadow: 0.1vh 0.1vh 0.2vh 0.2vh #aecadf;
+  box-shadow: 0.1vh 0.1vh 0.2vh 0.2vh #E6AFAC;
   
 }
 
