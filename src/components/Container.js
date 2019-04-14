@@ -59,14 +59,16 @@ class Container extends Component {
     }
 
     countAdd = (count, i) => {
-        this.state.product[i].counts += 1
+        let product = Object.assign({},this.state.product)
+        product[i].counts+=1
         this.setState(this.state)
 
     }
 
     countSubtract = (count, i) => {
         if (count !== 0) {
-            this.state.product[i].counts += -1
+            let product = Object.assign({},this.state.product)
+            product[i].counts+=-1
             this.setState(this.state)
         }
     }
@@ -142,12 +144,13 @@ class Container extends Component {
     }
 
     checkMark = (sign, i) => {
-console.log(this.state.product[i])
         if (sign === "") {
-            this.state.product[i].sign = "\u2713"
+            let product = Object.assign({},this.state.product)
+            product[i].sign = "\u2713"
             this.setState(this.state)
         } else {
-            this.state.product[i].sign = ""
+            let product = Object.assign({},this.state.product)
+            product[i].sign = ""
             this.setState(this.state)
         }
 
@@ -156,10 +159,10 @@ console.log(this.state.product[i])
 
 
     startswipe1 = (e,i) => {
-        console.log(this.state.product[i])
         if(this.state.product[i].moved===0){
-            this.state.product[i].moved=1
-            this.state.product[i].startX=e.clientX
+            let product = Object.assign({},this.state.product)
+            product[i].moved=1
+            product[i].startX=e.clientX
             this.setState(this.state)
         }
       
@@ -167,35 +170,35 @@ console.log(this.state.product[i])
 
     moveswipe1 = (e,i)=> {
         
-        console.log(this.state.product[i])
         if (this.state.product[i].moved===1) {
-            this.state.product[i].p=e.clientX-this.state.product[i].startX
-            if(this.state.product[i].p<0){
-                console.log("yey")
-                this.state.product[i].left1="-8"
+            let product = Object.assign({},this.state.product)
+         
+            product[i].p=e.clientX-product[i].startX
+            if(product[i].p<0){
+                product[i].left1="-8"
                 this.setState(this.state) 
                  
-            }else if(this.state.product[i].p>0){
-                console.log("yey")
-                this.state.product[i].left1="0"
+            }else if(product[i].p>0){
+              product[i].left1="0"
         this.setState(this.state) 
             }
            
-            window.setTimeout(() => this. stopswipe1(e,i), 7000);     
-    }
-       
+            window.setTimeout(() => this.stopswipe1(e,i), 7000);     
+    }   
     }
 
     stopswipe1 = (e,i) => {
-        this.state.product[i].left1="0"
+        let product = Object.assign({},this.state.product)
+       product[i].left1="0"
         this.setState(this.state)  
       };
    
     stopMove1 = (e,i) => {
-        this.state.product[i].moved=0
-        this.state.product[i].p=0
-        this.state.product[i].x=0
-        this.state.product[i].startX=0
+        let product = Object.assign({},this.state.product)
+       product[i].moved=0
+       product[i].p=0
+       product[i].x=0
+        product[i].startX=0
         this.setState(this.state)  
   };
 
