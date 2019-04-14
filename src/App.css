@@ -29,9 +29,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5.5vh;
+  font-size: 4.5vh;
   opacity: 0.2;
-  color: #727077;
+  color: red;
   font-family: "Thasadith", sans-serif;
 }
 
@@ -477,7 +477,7 @@
     width:60%;
   }
   .sign-in-form ::placeholder {
-    font-size: 5.5vh;
+    font-size: 4.5vh;
   }
   .item {
     width: 70vw;
@@ -540,7 +540,7 @@
     width:60%;
   }
   .sign-in-form ::placeholder {
-    font-size: 5.5vh;
+    font-size: 4.5vh;
   }
   .item {
     width: 70vw;
@@ -603,7 +603,7 @@
     width:60%;
   }
   .sign-in-form ::placeholder {
-    font-size: 5.5vh;
+    font-size: 4.5vh;
   }
   .item {
     width: 70vw;
