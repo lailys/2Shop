@@ -23,7 +23,7 @@ class Container extends Component {
         x: 0, 
         startX: 0,
         moved:0,
-        transition: "left .7s",
+        transition: "left .3s",
         p:0
        
     }
@@ -183,14 +183,17 @@ class Container extends Component {
         this.setState(this.state) 
             }
            
-            window.setTimeout(() => this.stopswipe1(e,i), 7000);     
+            window.setTimeout(() => this.stopswipe1(e,i), 3000);     
     }   
     }
 
     stopswipe1 = (e,i) => {
-        let product = Object.assign({},this.state.product)
-       product[i].left1="0"
-        this.setState(this.state)  
+        if(this.state.product.length>0){
+            let product = Object.assign({},this.state.product)
+            product[i].left1="0"
+             this.setState(this.state)  
+        }
+       
       };
    
     stopMove1 = (e,i) => {

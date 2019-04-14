@@ -56,6 +56,7 @@ class App extends Component {
     }
 
     queryChangeEmail = (key, word) => {
+        console.log(word)
         
 const final=word.replace(/\//, "")
         this.setState(() => {
