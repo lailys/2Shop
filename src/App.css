@@ -4,28 +4,72 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
+.sign-in-header{
+  font-family: "Thasadith", sans-serif;
+  font-size: 3.8vh;
+  color: #fdf7f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+position: absolute;
+top: 0;
+height: 7vh;
+width: 99vw;
+flex-direction: row;
+align-items: center;
 
-.sign-in {
+}
+#signup{
+
+  background-color: rgb(248, 150, 128);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49.35vw;
+  height: 92%;
+
+   }
+#signup:hover{
+  cursor: pointer;
+  background-color: #D6735C;
+  }
+  #signin{
+    background-color: rgb(248, 150, 128);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49.35vw;
+    height: 92%;
+    }
+  #signin:hover{
+    cursor: pointer;
+    background-color: #D6735C;
+    }
+.sign-up-page {
+  
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   background-color: white;
+
 }
 
-.sign-in-form {
+#sign-up-form {
+  box-shadow: 0.1vh 0.1vh 0.2vh 0.2vh rgb(231, 209, 209);
   font-family: "Thasadith", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 70%;
-  height: 35%;
+  height: 45%;
 }
-
-.sign-in-form ::placeholder {
+#sign-up-form ::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +78,28 @@
   color: #ba4528;
   font-family: "Thasadith", sans-serif;
 }
+
+#sign-in-form {
+  box-shadow: 0.1vh 0.1vh 0.2vh 0.2vh rgb(231, 209, 209);
+  font-family: "Thasadith", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 35%;
+}
+#sign-in-form ::placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.5vh;
+  opacity: 0.2;
+  color: #ba4528;
+  font-family: "Thasadith", sans-serif;
+}
+
+
 
 .form-in {
   box-shadow: 0.1vh 0.1vh 0.2vh 0.2vh rgb(231, 209, 209);
@@ -54,7 +120,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ba4528;
+  background-color: rgb(248, 150, 128);
   font-family: "Thasadith", sans-serif;
   border-radius: 2px;
   box-shadow: 0.1vh 0.1vh 0.2vh 0.2vh rgba(179, 159, 159, 0.637);
@@ -64,6 +130,7 @@
   height: 8vh;
   width: 50vw;
   margin-top: 2.2vh;
+  margin-bottom: 1.5vh
 }
 
 .form-sign-up-btn :active {
@@ -457,15 +524,11 @@
   .items {
     font-size: 2vw;
   }
-}
-
-
-@media only screen and (min-width: 710px) and (max-width: 1000px) {
-  
-  .item-from {
-    font-size: 1vw;
+  #sign-up-form {
+    width: 400px;
+    height: 361px;
   }
-  .sign-in-form {
+ #sign-in-form {
     width: 400px;
     height: 361px;
   }
@@ -475,7 +538,39 @@
   .form-sign-up-btn {
     width:60%;
   }
-  .sign-in-form ::placeholder {
+  #sign-up-form ::placeholder {
+    font-size: 4.5vh;
+  }
+  #sign-in-form ::placeholder {
+    font-size: 4.5vh;
+  }
+  
+}
+
+
+@media only screen and (min-width: 710px) and (max-width: 1000px) {
+ 
+  .item-from {
+    font-size: 1vw;
+  }
+  #sign-up-form {
+    width: 400px;
+    height: 361px;
+  }
+ #sign-in-form {
+    width: 400px;
+    height: 361px;
+  }
+  .form-in {
+    width:80%;
+  }
+  .form-sign-up-btn {
+    width:60%;
+  }
+  #sign-up-form ::placeholder {
+    font-size: 4.5vh;
+  }
+  #sign-in-form ::placeholder {
     font-size: 4.5vh;
   }
   .item {
@@ -528,7 +623,11 @@
   .item-from {
     font-size: 1vw;
   }
-  .sign-in-form {
+  #sign-up-form {
+    width: 400px;
+    height: 361px;
+  }
+  #sign-in-form {
     width: 400px;
     height: 361px;
   }
@@ -538,7 +637,10 @@
   .form-sign-up-btn {
     width:60%;
   }
-  .sign-in-form ::placeholder {
+  #sign-up-form ::placeholder {
+    font-size: 4.5vh;
+  }
+  #sign-in-form ::placeholder {
     font-size: 4.5vh;
   }
   .item {
@@ -591,7 +693,11 @@
   .item-from {
     font-size: 1vw;
   }
-  .sign-in-form {
+  #sign-up-form {
+    width: 400px;
+    height: 361px;
+  }
+  #sign-in-form {
     width: 400px;
     height: 361px;
   }
@@ -601,7 +707,10 @@
   .form-sign-up-btn {
     width:60%;
   }
-  .sign-in-form ::placeholder {
+  #sign-up-form ::placeholder {
+    font-size: 4.5vh;
+  }
+  #sign-in-form ::placeholder {
     font-size: 4.5vh;
   }
   .item {

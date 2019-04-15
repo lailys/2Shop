@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import escapeRegExp from 'escape-string-regexp';
 import {Form, Button} from 'react-bootstrap';
+import {LinkContainer} from "react-router-bootstrap";
 import Product from './Product'
 
 
@@ -278,7 +279,17 @@ class Container extends Component {
                    />
 
 
-                <div className="footer"><Button className="signout"><div >Sign Out</div></Button></div>
+                <div className="footer">
+                <LinkContainer
+                 style={{
+                    textDecoration: "none"
+                }}
+                to="/signin">
+                <Button className="signout">
+                <div >Sign Out</div>
+                </Button>
+                </LinkContainer>
+                </div>
             </div>
         );
     }
