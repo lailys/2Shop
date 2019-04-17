@@ -130,7 +130,7 @@ class App extends Component {
                         </LinkContainer>
                     </header>
 
-                    <h3>"Just click on sign in/up button for now"</h3>
+                    <h3>"Just click the sign-in/up button for now"</h3>
 
 
 
