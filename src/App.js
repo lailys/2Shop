@@ -135,7 +135,7 @@ color:"#005da5"
                         </LinkContainer>
                     </header>
 
-                    <h3>"Please just click signin button or now"</h3>
+                    <h3>"Please just click on the sign in button or now"</h3>
                     <Route
              exact
              path='/'
