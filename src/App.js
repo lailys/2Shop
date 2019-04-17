@@ -134,6 +134,8 @@ color:"#005da5"
                         </a>
                         </LinkContainer>
                     </header>
+
+                    <h3>"Please just click signin button or now"</h3>
                     <Route
              exact
              path='/'

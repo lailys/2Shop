@@ -4,7 +4,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+flex-direction: column;
   position: relative;
+}
+h3{
+  font-family: "Thasadith", sans-serif;
+  position: absolute;
+  top:11vh;
+  color:#7E0F1C;
 }
 .sign-in-header{
   font-family: "Thasadith", sans-serif;
