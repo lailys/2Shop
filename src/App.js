@@ -134,12 +134,7 @@ color:"#005da5"
                         </a>
                         </LinkContainer>
                     </header>
-               
-               
-                       
-                    
-                        
-             <Route
+                    <Route
              exact
              path='/'
              render={() => (
@@ -203,8 +198,8 @@ color:"#005da5"
                 </div>
              )}
                    />
-
-<Route
+               
+                    <Route
              exact
              path='/signin'
              render={() => (
@@ -262,62 +257,62 @@ color:"#005da5"
              )}
                    />
 
-
-<Route
+                    
+                        
+                    <Route
              exact
-             path='/signup'
-             render={() => (
+             path='/signup' render={() => (
                 <div className="sign-up-page">
-                        <form
-                            id="sign-up-form"
-                            style={{
-                            display: this.state.up
-                        }}>
-                        <input
-                                type="Username..."
-                                placeholder="Username..."
-                                className="form-in"
-                                required
-                                value={this.state.queryId}
-                                name="username"
-                                onChange={(e) => this.queryChangeId("newName", e.target.value)}/>
-                            <input
-                                type="email"
-                                placeholder="Email..."
-                                className="form-in"
-                                required
-                                value={this.state.queryEmail}
-                                name="email"
-                                onChange={(e) => this.queryChangeEmail("newEmail", e.target.value)}/>
-                            <input
-                                type="Password..."
-                                placeholder="Password..."
-                                className="form-in"
-                                required
-                                value={this.state.queryId}
-                                name="name"
-                                onChange={(e) => this.queryChangeId("newName", e.target.value)}/>
-                            <LinkContainer
-                            to="/your-list"
-                            style={{
-                                textDecoration: "none"
-                            }}
-                             >
-                                <Button
-                                   
-                              
-                                    type="submit"
-                                    className="form-sign-up-btn"
-                                    onClick={(e) => this.addCostumer(e.target.value)}>
-                                    Sign Up
-                                </Button>
-                            </LinkContainer>
-                        </form>
+                <form
+                    id="sign-up-form"
+                    style={{
+                    display: this.state.up
+                }}>
+                <input
+                        type="Username..."
+                        placeholder="Username..."
+                        className="form-in"
+                        required
+                        value={this.state.queryId}
+                        name="username"
+                        onChange={(e) => this.queryChangeId("newName", e.target.value)}/>
+                    <input
+                        type="email"
+                        placeholder="Email..."
+                        className="form-in"
+                        required
+                        value={this.state.queryEmail}
+                        name="email"
+                        onChange={(e) => this.queryChangeEmail("newEmail", e.target.value)}/>
+                    <input
+                        type="Password..."
+                        placeholder="Password..."
+                        className="form-in"
+                        required
+                        value={this.state.queryId}
+                        name="name"
+                        onChange={(e) => this.queryChangeId("newName", e.target.value)}/>
+                    <LinkContainer
+                    to="/your-list"
+                    style={{
+                        textDecoration: "none"
+                    }}
+                     >
+                        <Button
+                           
+                      
+                            type="submit"
+                            className="form-sign-up-btn"
+                            onClick={(e) => this.addCostumer(e.target.value)}>
+                            Sign Up
+                        </Button>
+                    </LinkContainer>
+                </form>
 
 
-                </div>
+        </div>
              )}
-                   />
+                />
                    
             
                 <Route
