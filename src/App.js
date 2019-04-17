@@ -330,4 +330,3 @@ color:"#005da5"
 }
 
 export default App;
-
