@@ -214,7 +214,7 @@ class Container extends Component {
 
             <div className="app-container">
 
-                <div fluid className="header" >
+                <div  className="header" >
 
                     <div className="shopper-name"><span
                     style={{
@@ -284,8 +284,8 @@ class Container extends Component {
                  style={{
                     textDecoration: "none"
                 }}
-                to="/signin">
-                <Button className="signout">
+                to="/">
+                <Button className="signout" onClick={this.props.handlesignOut}>
                 <div >Sign Out</div>
                 </Button>
                 </LinkContainer>
@@ -296,3 +296,5 @@ class Container extends Component {
 }
 
 export default Container;
+
+ 

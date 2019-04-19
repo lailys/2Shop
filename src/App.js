@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import {Route} from 'react-router-dom';
 import Container from './components/Container';
-import {Form, Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 
 import escapeRegExp from 'escape-string-regexp';
 import {LinkContainer} from "react-router-bootstrap";
@@ -10,316 +10,286 @@ import {LinkContainer} from "react-router-bootstrap";
 class App extends Component {
 
     state = {
+        logged:false,
         clientName: "",
         clientEmail: "",
-        clients: [],
-        queryId: "",
+        clients: {},
+        queryPassword: "",
         queryEmail: "",
+        queryName: "",
         moved: false,
         X: 0,
         p: "",
-        up: "none", 
-        in: "",
+        up: "none", in: "",
         incolor: "#005da5",
-        upcolor: ""
+        upcolor: "",
+        display:"",
+        listDsiplay:""
     }
 
-    componentDidMount() {
-        this.hydrateStateWithLocalStorage();
+    componentDidMount=()=> {
+     
+    
 
     }
 
     componentWillUnmount() {
+    
 
         // saves if component has a chance to unmount
-        this.saveStateToLocalStorage();
+
     }
 
-    hydrateStateWithLocalStorage() {
-        for (let key in this.state) {
-            if (localStorage.hasOwnProperty(key)) {
-                let value = localStorage.getItem(key);
-                try {
-                    value = JSON.parse(value);
-                    this.setState({[key]: value});
-                } catch (e) {
-                    this.setState({[key]: value});
-                }
+
+print=()=>{
+    console.log(this.state.clients)
+}
+   
+    handleSignup=e=>{
+        e.preventDefault();
+        console.log("yey")
+
+        const clients={
+              name:this.state.queryName,
+              email:this.state.queryEmail,
+              password:this.state.queryPassword,
+              products:[],
+              display:"none"
+            
             }
+        this.setState({clients})
+            console.log(clients) 
+            if(this.state.clients){
+ this.setState({logged:true,
+                    display:"none"}) 
+            }
+    }
+
+
+
+
+    handleSubmit = e => {
+        e.preventDefault();
+        console.log("yey")
+ 
+ if(this.state.queryName!==""){
+    console.log(this.state.queryName)
+    this.setState({logged:true,
+                    display:"none"}) 
+ }
+          
+    
+            
+  
+    }
+
+    handleChange = e => {
+        console.log(e.target.name)
+        if (e.target.name === "username") {
+            console.log("name:" +e.target.value)
+            this.setState({queryName:e.target.value}) 
+        }else  if (e.target.name === "email") {
+            console.log("email:" +e.target.value)
+            this.setState({queryEmail:e.target.value}) 
+        }else  if (e.target.name === "password") {
+            console.log("password:" +e.target.value)
+            this.setState({queryPassword:e.target.value}) 
         }
     }
 
-    saveStateToLocalStorage() {
-        // for every item in React state
-        for (let key in this.state) {
-            // save to localStorage
-            localStorage.setItem(key, JSON.stringify(this.state[key]));
-        }
-    }
-
-    queryChangeEmail = (key, word) => {
-        console.log(word)
-
-        const final = word.replace(/\//, "")
-        this.setState(() => {
-            return {queryEmail: final}
-        })
-        localStorage.setItem(key, word);
-    }
-
-    queryChangeId = (key, word) => {
-        this.setState(() => {
-            return {queryId: escapeRegExp(word)}
-        })
-        localStorage.setItem(key, word);
-    }
-
-    addCostumer = async(e) => {
-        const addedName = this.state.queryId;
-        const addedEmail = this.state.queryEmail;
-
-        const costumer = {
-            'name': addedName,
-            'email': addedEmail
-        };
-        const clientName = addedName
-        const clients = [...this.state.clients]
-        clients.push(costumer)
-        this.setState(() => {
-            return {clientEmail: addedEmail, clientName: addedName, clients}
-        })
-
-        localStorage.setItem("clientName", clientName);
-        localStorage.setItem("newperson", "");
-
-        await this.setState(() => {
-            return {queryId: "", queryEmail: ""}
+    handlesignOut=()=>{
+        this.setState({logged:false,
+            listDsiplay:"none",
+            display:"",
+            queryPassword:""
         })
     }
+
+
 
 
     render() {
+      const listPage=this.state.logged? <Container clientName={this.state.queryName} handlesignOut={this.handlesignOut} /> :''
+      
+
         return (
             <div className="App">
-                <header className="sign-in-header">
-                <LinkContainer
-                            to="/signup"
-                            style={{
-                            textDecoration: "none",
-                            color:"white"
-                        }}
-                        activeStyle={{
-                           color:"#005da5"
-                        }}>
-                        <a className="signup" id="signup">
-                        Sign Up
-                        </a>
-                        </LinkContainer>
-                        <LinkContainer
-                            to="/signin"
-                            style={{
-                            textDecoration: "none",
-                            color:"white"
-                        }}
-                        activeStyle={{
-                            color:"#005da5"
-                                                    }}>
-                        <a className="signin" id="signin">
-                        Sign In
-                        </a>
-                        </LinkContainer>
-                    </header>
 
-                    <h3>"Just click the sign-in/up button for now"</h3>
+                <h2>**Just click the sign in/up button for now </h2>
 
-
-
-
-                    <Route
+              
+                <Route
              exact
              path='/'
              render={() => (
-                <div className="sign-up-page">
-
-
-
-                
-                <form
-                        id="sign-in-form"
-                        onSubmit={(e) => this.addCostumer(e.target.value)}
-                     >
-                        <input
-                            type="username"
-                            placeholder="Username..."
-                            className="form-in"
-                            required
-                            value={this.state.queryEmail}
-                            name="email"
-                            onChange={(e) => this.queryChangeEmail("newEmail", e.target.value)}/>
-                        <input
-                            type="password"
-                            placeholder="Password..."
-                            className="form-in"
-                            required
-                            value={this.state.queryId}
-                            name="name"
-                            onChange={(e) => this.queryChangeId("newName", e.target.value)}/>
-                        <LinkContainer
-                            to="/your-list"
-                            style={{
-                            textDecoration: "none"
-                        }}>
-                            <Button
-                                type="submit"
-                                className="form-sign-up-btn"
-                                >
+                        <div className="sign-up-page" 
+                        style={{display:this.state.display}}>
+                        <form onSubmit={this.handleSubmit} className="sign-in-form">
+    
+                            <input
+                                className="form-in"
+                                required
+                                type="text"
+                                name="username"
+                                placeholder=" &#xf007; Username..."
+                                onChange={this.handleChange}/>
+    
+                         
+                            <input
+                                className="form-in"
+                                required
+                                value={this.state.queryPassword}
+                                type="password"
+                                name="password"
+                                placeholder=" &#xf023; Password..."
+                                onChange={this.handleChange}/>
+    
+                            <Button type="submit" className="form-sign-up-btn">
                                 Sign in
                             </Button>
-                        </LinkContainer>
-                        <span
-                          style={{color:"#2E1C18",
-                          fontSize:"1.2vw",
-                          cursor: "pointer"}}>dont have an accout?!
-                              <LinkContainer
-                            to="/signup"
-                            style={{
-                            textDecoration: "none"
-                        }}>
-                          <a
-                          className="signin"
-                         style={{color:"#176BAD",
-                         fontSize:"1.2vw"}}
-                          >
-                          click here
-                          </a>
-
-                          </LinkContainer></span>
-                    </form>
-
-                </div>
-             )}
-                   />
+                            
+                            <small
+                              style={{color:"#2E1C18",
+                              fontSize:"1.6vh",
+                              cursor: "pointer"}}>dont have an accout?!
+                                 <LinkContainer
+                                to="/signup"
+                                style={{
+                                textDecoration: "none"
+                            }}>
+                              <a
+                              className="signin"
+                             style={{color:"#176BAD",
+                             }}
+                              >sign up here</a>
+                              </LinkContainer>
+                              </small>
+                        </form>
+                    </div>)}/ >
 
 
 
 
-               
-                    <Route
+
+
+                <Route
              exact
-             path='/signin'
+             path='/sign'
              render={() => (
-                <div className="sign-up-page">
-                <form
-                        id="sign-in-form"
-                     >
-                        <input
-                            type="username"
-                            placeholder="Username..."
-                            className="form-in"
-                            required
-                            value={this.state.queryEmail}
-                            name="email"
-                            onChange={(e) => this.queryChangeEmail("newEmail", e.target.value)}/>
-                        <input
-                            type="password"
-                            placeholder="Password..."
-                            className="form-in"
-                            required
-                            value={this.state.queryId}
-                            name="name"
-                            onChange={(e) => this.queryChangeId("newName", e.target.value)}/>
-                        <LinkContainer
-                            to="/your-list"
-                            style={{
-                            textDecoration: "none"
-                        }}>
-                            <Button
-                                type="submit"
-                                className="form-sign-up-btn"
-                                onClick={(e) => this.addCostumer(e.target.value)}>
+                        <div className="sign-up-page" 
+                        style={{display:this.state.display}}>
+                        <form onSubmit={this.handleSignup} className="sign-in-form">
+    
+                            <input
+                                className="form-in"
+                                required
+                                type="text"
+                                name="username"
+                                placeholder=" &#xf007; Username..."
+                                onChange={this.handleChange}/>
+    
+                         
+                            <input
+                                className="form-in"
+                                required
+                                type="password"
+                                name="password"
+                                placeholder=" &#xf023; Password..."
+                                onChange={this.handleChange}/>
+    
+                            <Button type="submit" className="form-sign-up-btn">
                                 Sign in
                             </Button>
-                        </LinkContainer>
-                        <span
-                          style={{color:"#2E1C18",
-                          fontSize:"1.2vw",
-                          cursor: "pointer"}}>dont have an accout?!
-                             <LinkContainer
-                            to="/signup"
-                            style={{
-                            textDecoration: "none"
-                        }}>
-                          <a
-                          className="signin"
-                         style={{color:"#176BAD",
-                         fontSize:"1.2vw"}}
-                          >click here</a>
-                          </LinkContainer>
-                          </span>
-                    </form>
-
-                </div>
-             )}
-                   />
-
-                    
-
-                    
+                            
+                            <small
+                              style={{color:"#2E1C18",
+                              fontSize:"1.6vh",
+                              cursor: "pointer"}}>dont have an accout?!
+                                 <LinkContainer
+                                to="/signup"
+                                style={{
+                                textDecoration: "none"
+                            }}>
+                              <a
+                              className="signin"
+                             style={{color:"#176BAD",
+                             }}
+                              >sign up here</a>
+                              </LinkContainer>
+                              </small>
+                        </form>
+                    </div>)}/ >
+    
                         
                     <Route
              exact
-             path='/signup' render={() => (
-                <div className="sign-up-page">
-                <form
-                        id="sign-in-form"
-                     >
-                     <input
-                            type="username"
-                            placeholder="Username..."
-                            className="form-in"
-                            required
-                            value={this.state.queryEmail}
-                            name="username"
-                            onChange={(e) => this.queryChangeEmail("newEmail", e.target.value)}/>
-                        <input
-                            type="email"
-                            placeholder="Email..."
-                            className="form-in"
-                            required
-                            value={this.state.queryEmail}
-                            name="email"
-                            onChange={(e) => this.queryChangeEmail("newEmail", e.target.value)}/>
-                        <input
-                            type="password"
-                            placeholder="Password..."
-                            className="form-in"
-                            required
-                            value={this.state.queryId}
-                            name="name"
-                            onChange={(e) => this.queryChangeId("newName", e.target.value)}/>
-                        <LinkContainer
-                            to="/your-list"
-                            style={{
-                            textDecoration: "none"
-                        }}>
-                            <Button
-                                type="submit"
-                                className="form-sign-up-btn"
-                                onClick={(e) => this.addCostumer(e.target.value)}>
-                                Sign Up
-                            </Button>
-                        </LinkContainer>
-                      
-                    </form>
+             path='/signup'
+             render={() => (
 
-                </div>
-             )}
-                />
-                   
-            
+                        <div className="sign-up-page">
+                        <form onSubmit={e=>this.handleSignup(e)} className="sign-in-form">
+    
+                            <input
+                                className="form-in"
+                                required
+                                type="text"
+                                name="username"
+                                placeholder=" &#xf007; Username..."
+                                onChange={this.handleChange}/>
+    
+                            <input
+                                className="form-in"
+                                required
+                                type="email"
+                                name="email"
+                                placeholder=" &#xf003; Email..."
+                                onChange={this.handleChange}/>
+                            <input
+                                className="form-in"
+                                required
+                                type="password"
+                                name="password"
+                                placeholder=" &#xf023; Password..."
+                                onChange={this.handleChange}/>
+    
+                            <Button type="submit" className="form-sign-up-btn">
+                                Sign up
+                            </Button>
+                            
+                            <small
+                              style={{color:"#2E1C18",
+                              fontSize:"1.6vh",
+                              cursor: "pointer"}}>already have an account?!
+                                 <LinkContainer
+                                to="/sign"
+                                style={{
+                                textDecoration: "none"
+                            }}>
+                              <a
+                              className="signin"
+                             style={{color:"#176BAD",
+                             }}
+                              >sign in here</a>
+                              </LinkContainer>
+                              </small>
+                        </form>
+                    </div>
+
+                    )}/>
+
+
+
+
+
+
+
                 <Route
                     path='/your-list'
-                    render={() => (<Container clientName={this.state.clientName}/>)}/>
+                    style={{display:this.state.listDsiplay}}
+                   >
+                    {listPage}
+                   
+                   </Route>
 
             </div>
         );
