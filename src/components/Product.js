@@ -53,7 +53,7 @@ function Product(props) {
                                 <div className="counter"
                                 >
                                 <Button
-                                    aria-label="Remove"
+                                    aria-label="SubtractMore"
                                     className="button subtract"
                                     onClick={e => props.countSubtract(product.counts, i)}>
                                     -
