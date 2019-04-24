@@ -494,7 +494,7 @@
 
     @media only screen and (min-width: 320px) and (max-width: 449px) {
         .swipe2 {
-            width: 8vw;
+            width: 4vw;
     
         }
         #check {
@@ -522,7 +522,7 @@
     }
     .swipe1 {
         justify-content: center;
-        width: 86%;
+        width: 80%;
     }
     
     }
