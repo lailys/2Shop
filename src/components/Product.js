@@ -22,6 +22,9 @@ function Product(props) {
                          onMouseDown={e => props.startswipe1(e,i)}
                          onMouseMove={e => props.moveswipe1(e,i)}
                          onMouseUp={e => props.stopMove1(e,i)}
+                         onTouchStart={e => props.startswipe1(e,i)}
+                         onTouchMove={e => props.moveswipe1(e,i)}
+                         onTouchEnd={e => props.stopMove1(e,i)}
                       
                          >
                            <div className="swipe1"

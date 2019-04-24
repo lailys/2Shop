@@ -51,6 +51,8 @@
         background-color: #BA4528;
         font-family: "Thasadith", sans-serif;
         border-radius: 4px;
+        -moz-box-shadow: 0.2vh 0.2vh 0.3vh 0.3vh rgba(155, 138, 138, 0.637);
+        -webkit-box-shadow: 0.2vh 0.2vh 0.3vh 0.3vh rgba(155, 138, 138, 0.637);
         box-shadow: 0.2vh 0.2vh 0.3vh 0.3vh rgba(155, 138, 138, 0.637);
         color: #fdf7f6;
         font-size: 4vh;
@@ -73,6 +75,8 @@
     }
     
     .form-in {
+        -moz-box-shadow: 0.1vh 0.1vh 0.2vh 0.2vh rgb(231, 209, 209);
+        -webkit-box-shadow: 0.1vh 0.1vh 0.2vh 0.2vh rgb(231, 209, 209);
         box-shadow: 0.1vh 0.1vh 0.2vh 0.2vh rgb(231, 209, 209);
         display: flex;
         justify-content: center;
@@ -96,6 +100,8 @@
         background-color: #BA4528;
         font-family: "Thasadith", sans-serif;
         border-radius: 2px;
+        -moz-box-shadow: 0.2vh 0.2vh 0.3vh 0.3vh rgba(158, 139, 139, 0.637);
+        -webkit-box-shadow: 0.2vh 0.2vh 0.3vh 0.3vh rgba(155, 138, 138, 0.637);
         box-shadow: 0.2vh 0.2vh 0.3vh 0.3vh rgba(155, 138, 138, 0.637);
         color: #fdf7f6;
         font-size: 4vh;
