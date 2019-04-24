@@ -227,24 +227,22 @@ class Container extends Component {
                 </div>
 
                 <Form className="menu" onSubmit={this.onSubmit}>
-                    <div className="add-button">
+                    
                         <Button
                             id="add-item-btn-main"
                             aria-label="Add"
                             type="submit"
                           >
 &#43;                        </Button>
-                    </div>
+ 
 
-                    <div className="form">
+                    
 
                         <Form.Control
                             className="form-input"
                             type="text"
                             placeholder="Product"
-                            style={{
-                            marginRight: "4%"
-                        }}
+                       
                             required="required"
                             value={this.state.queryName}
                             onChange={(e) => this.queryChangeItem("newItem", e.target.value)}/>
@@ -256,7 +254,7 @@ class Container extends Component {
                             value={this.state.queryStore}
                             onChange={(e) => this.queryChangeStore("newStore", e.target.value)}/>
 
-                    </div>
+  
 
                 </Form>
 

@@ -178,7 +178,7 @@
         width: 99vw;
         color: #fdf7f6;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
     
@@ -193,6 +193,7 @@
     }
     
     #add-item-btn-main {
+        box-sizing: border-box;
         background-color: rgb(222, 237, 248);
         border: 0.2vw solid #ffddd3;
         color: #dbb9b2;
@@ -206,7 +207,7 @@
         border-radius: 2px;
         font-size: 3.5vh;
         height: 5vh;
-        width: 80vw;
+        width: 28vw;
         border: none;
     }
     
@@ -221,7 +222,7 @@
     
     .form {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         width: 60vw;
         height: 8vh;
@@ -231,10 +232,10 @@
         border: 0.2vw solid rgb(222, 237, 248);
         background-color: whitesmoke;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         text-align: center;
-        width: 26.8vw;
+        width: 28vw;
         height: 5.2vh;
         font-size: 3vh;
         font-weight: bold;
@@ -536,6 +537,8 @@
             align-items: center;
             justify-content: center;
         }
+        #add-item-btn-main {
+            box-shadow: 0.06vw 0.06vw 0.2vw 0.2vw #dbb9b2;}
     }
     @media only screen and (min-height: 320px) and (max-height: 734px) {
         .header { 
@@ -588,6 +591,10 @@
             width: 10vh;
             font-size: 3vh;
         }
+      
+        #add-item-btn-main {
+            box-shadow: 0.06vw 0.06vw 0.2vw 0.2vw #dbb9b2;}
+
     }
     
     @media only screen and (min-width: 1001px) and (max-width: 1600px) {
