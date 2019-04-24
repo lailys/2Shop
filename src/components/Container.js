@@ -216,12 +216,13 @@ class Container extends Component {
 
                 <div  className="header" >
 
-                    <div className="shopper-name">2shop</div>
+                    <div className="shopper-name">2Shop</div>
                     <div className="items">
                         <span
                             style={{
                             color: "#005DA5",
                             marginRight: ".4vw",
+                          
                             
                         }}>{this.state.product.length}</span>Items</div>
                 </div>

@@ -495,9 +495,9 @@
 
 
     
-    @media only screen and (min-width: 450px) and (max-width: 709px) {
+    @media only screen and (min-width: 320px) and (max-width: 709px) {
         .shopper-name {
-            font-size: 3.8vw;
+            font-size: 5vw;
         }
         .items {
             font-size: 2vw;
@@ -522,13 +522,7 @@
         .item {
             width: 70vw;
         }
-        .shopper-name {
-            font-size: 2.8vw;
-        }
-        .items {
-            font-size: 1.4vw;
-            width: 18%;
-        }
+    
         .counter {
             width: 14vw;
             height: 95%;
