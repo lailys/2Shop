@@ -497,7 +497,10 @@
     
     @media only screen and (min-width: 320px) and (max-width: 500px) {
       .swipe1{
-          width: 90%;
+          width: 86%;
+      }
+      .swipe2{
+        width: 4%;
       }
         .shopper-name {
             font-size: 8vw;
