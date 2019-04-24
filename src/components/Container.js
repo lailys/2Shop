@@ -216,13 +216,7 @@ class Container extends Component {
 
                 <div  className="header" >
 
-                    <div className="shopper-name"><span
-                    style={{
-                        color: "#005DA5",
-                        fontWeight:"",
-                        marginRight: "1.5vw"
-                        
-                    }}>{this.props.clientName}</span> 's list</div>
+                    <div className="shopper-name">2shop</div>
                     <div className="items">
                         <span
                             style={{
