@@ -27,19 +27,27 @@ function Product(props) {
                          onTouchEnd={e => props.stopMove1(e,i)}
                       
                          >
+                                    <div className="swipe2"
+                                   
+                                   >
+          <Button
+                                         aria-label="Close"
+                                         id="close"
+                                         onClick={(e) => props.removeProduct(product.name)}>X</Button>
+                                 </div>
                            <div className="swipe1"
                              >
                       
                            
                            
-                           <div className="left-buttons">
+                        
                                 <Button
                                     id="check"
                                     aria-label="Checkmark"
                                     onClick={(e) => props.checkMark(product.sign, i)}>
                                     {product.sign}
                                 </Button>
-                            </div>
+                      
                             <div className="item"
                            
                             >
@@ -68,14 +76,7 @@ function Product(props) {
                             </div>
 
                             </div>
-                            <div className="swipe2"
-                                   
-                              >
-     <Button
-                                    aria-label="Close"
-                                    id="close"
-                                    onClick={(e) => props.removeProduct(product.name)}>X</Button>
-                            </div>
+                           
                         </div>
                     )
                 })}
