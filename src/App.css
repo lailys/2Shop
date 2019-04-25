@@ -256,18 +256,17 @@
     }
     
     .content {
-       
+        
         position: relative;
         top: 0.5vh;
         height: 76.8vh;
-        width: 98vw;
+        width: 99vw;
         overflow-y: scroll;
         overflow-x: hidden;
         border: none;
     }
     
     .each-item {
-        
         display: flex;
         margin-bottom: 1.18vh;
         align-items: center;
@@ -291,7 +290,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 90%;
+        width: 85%;
         height: 6vh;
         margin-left:1vw;
     }
@@ -424,15 +423,14 @@
     }
     
     .swipe2 {
-        margin-left: 1vw;
-        margin-right: 1vw;
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         width: 8%;
         height: 6.4vh;
         border: none, ;
-
 
     }
     
