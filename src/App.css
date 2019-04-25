@@ -256,16 +256,18 @@
     }
     
     .content {
+       
         position: relative;
         top: 0.5vh;
         height: 76.8vh;
-        width: 96vw;
+        width: 98vw;
         overflow-y: scroll;
         overflow-x: hidden;
         border: none;
     }
     
     .each-item {
+        
         display: flex;
         margin-bottom: 1.18vh;
         align-items: center;
@@ -275,7 +277,7 @@
         left: 0;
         display: flex;
         flex-flow: row;
-        width: 96vw;
+        width: 95vw;
         height: 6.9vh;
         border-radius: 2px;
         box-sizing: border-box;
@@ -283,14 +285,14 @@
     }
     
     .swipe1 {
-        
+        background: #F9C1B4;
         margin-left: 0.5vw;
         margin-right: 0.5vw;
         box-shadow: 0.05vh 0.05vh 0.16vh 0.16vh #ebdad7;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 85%;
+        width: 90%;
         height: 6vh;
         margin-left:1vw;
     }
@@ -423,14 +425,15 @@
     }
     
     .swipe2 {
-        margin-left: 0.5vw;
-        margin-right: 0.5vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         width: 8%;
         height: 6.4vh;
         border: none, ;
+
 
     }
     
@@ -495,9 +498,9 @@
 
 
     
-    @media only screen and (min-width: 320px) and (max-width: 500px) {
+    @media only screen and (min-width: 370px) and (max-width: 500px) {
       .swipe1{
-          width: 86vw
+          width: 90vw
       }
       .swipe2{
         width: 10vw;
@@ -540,10 +543,8 @@
         }
         #add-item-btn-main {
             box-shadow: 0.06vw 0.06vw 0.2vw 0.2vw #dbb9b2;}
-            .each-item {
-              
-                      justify-content: flex-start;
-              
+            .each-item{
+                justify-content: center;
             }
             
             
