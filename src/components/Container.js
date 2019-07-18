@@ -85,7 +85,7 @@ class Container extends Component {
     const addedX = this.state.x;
     const addedLeft = this.state.left1;
     const textD = this.state.textDecoration;
-    const Display=this.state.display
+    const Display=this.state.hide
 
     let obj = {
       name: addedItem,
@@ -99,7 +99,7 @@ class Container extends Component {
       x: addedX,
       left1: addedLeft,
       text: textD,
-     hode:Display,
+     hide:Display,
     };
     console.log(textD);
     const product = [...this.state.product];
