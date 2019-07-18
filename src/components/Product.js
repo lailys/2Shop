@@ -1,87 +1,46 @@
-import React from 'react'
-import {Button} from 'react-bootstrap';
+import React from "react";
 
 function Product(props) {
+  return (
+    <div className="content">
+      {props.product
+        .sort((a, b) => a.store.localeCompare(b.store))
+        .map((product, i) => {
+          return (
+            <div
+              key={i}
+              className="each-item"
+              style={{
+                top: String(i * 7.3) + "vh",
+                transition: "left 2s "
+              }}
+            >
+              <div className="item">
+                <div
+                  className="item-name"
+                  onClick={e => props.lined(e, i)}
+                  style={{
+                    textDecoration: product.text
+                  }}
+                >
+                  {product.name}
+                </div>
 
-   
-    
-    return (
-        <div className="content">
-            {props
-                .product
-                .sort((a, b) => a.name.localeCompare(b.name))
-                .map((product, i) => {
-                    return (
+                <div className="category">{product.store}</div>
+              </div>
 
-                        <div key={i} className="each-item"
-                        style={{
-                           top:String(i*7.68)+"vh",
-                           left:product.left1+"vw",
-                           transition: "left .7s",
-                         }} 
-                         onMouseDown={e => props.startswipe1(e,i)}
-                         onMouseMove={e => props.moveswipe1(e,i)}
-                         onMouseUp={e => props.stopMove1(e,i)}
-                         onTouchStart={e => props.startswipe1(e,i)}
-                         onTouchMove={e => props.moveswipe1(e,i)}
-                         onTouchEnd={e => props.stopMove1(e,i)}
-                      
-                         >
-                                    <div className="swipe2"
-                                   
-                                   >
-          <Button
-                                         aria-label="Close"
-                                         id="close"
-                                         onClick={(e) => props.removeProduct(product.name)}>X</Button>
-                                 </div>
-                           <div className="swipe1"
-                             >
-                      
-                           
-                           
-                        
-                                <Button
-                                    id="check"
-                                    aria-label="Checkmark"
-                                    onClick={(e) => props.checkMark(product.sign, i)}>
-                                    {product.sign}
-                                </Button>
-                      
-                            <div className="item"
-                           
-                            >
-                            
-                                <span className="item-name">{product.name}</span>
-                                <span className="item-from">from</span>
-                                <span className="item-store">
-                                    {product.store}
-                                </span >
-                                </div>
-                                <div className="counter"
-                                >
-                                <Button
-                                    aria-label="SubtractMore"
-                                    className="button subtract"
-                                    onClick={e => props.countSubtract(product.counts, i)}>
-                                    -
-                                </Button>
-                                <div className="counts">{product.counts}</div>
-                                <Button
-                                    aria-label="AddMore"
-                                    className="button add"
-                                    onClick={e => props.countAdd(product.counts, i)}>
-                                    +
-                                </Button>
-                            </div>
-
-                            </div>
-                           
-                        </div>
-                    )
-                })}
-        </div>
-    );
-};
+              <div
+                id="delete"
+                className="fa fa-close"
+                aria-label="Close"
+                style={{ display: product.hide }}
+                onClick={e => props.removeProduct(product.name)}
+              />
+            </div>
+          );
+        })}
+    </div>
+  );
+}
 
 export default Product;
