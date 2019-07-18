@@ -244,3 +244,81 @@ right:2%;
 
 
 
+@media only screen and (min-width: 300px) and (max-width: 1024px) and (orientation: portrait) {
+
+  body {
+    position: relative;
+    top: 0vh;
+  }
+  
+  .App {
+  
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1366px) and (orientation: landscape) {
+
+  body {
+    position: relative;
+    top: 0vh;
+  }
+  
+  .App {
+  
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+  }
+  .header {
+    top: 0.5vh;
+    left: 1%;
+  
+    color: white;
+    width: 98%;
+    height: 8vh;
+  }
+  .shopper-name {
+    font-size: 5vh;
+    line-height: 7vh;
+  }
+  .menu {
+    top: 9.5vh;
+    height: 12vh;
+  }
+  #add-item-btn-main {
+  font-size: 30px;
+    height: 9vh;
+    width: 9vh;
+  }
+  .content {
+    top: 23vh;
+    left: 0;
+    height: 66vh;
+    width: 100%;
+  }
+  .footer {
+  
+  
+    border: none;
+    width: 98%;
+    height: 8vh;
+  }
+ 
+}
+
+
+
+
