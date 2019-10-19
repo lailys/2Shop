@@ -15,7 +15,7 @@ function Product(props) {
                 transition: "left 2s "
               }}
             >
-              <div className="item">
+           
                 <div
                   className="item-name"
                   onClick={e => props.lined(e, i)}
@@ -27,7 +27,7 @@ function Product(props) {
                 </div>
 
                 <div className="category">{product.store}</div>
-              </div>
+        
 
               <div
                 id="delete"

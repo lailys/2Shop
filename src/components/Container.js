@@ -27,6 +27,7 @@ class Container extends Component {
       "beforeunload",
       this.saveStateToLocalStorage.bind(this)
     );
+ 
   }
   componentWillUnmount() {
     window.removeEventListener(
@@ -123,6 +124,10 @@ class Container extends Component {
     this.setState({ product: updatedProduct });
     localStorage.setItem("product", JSON.stringify(updatedProduct));
   };
+  showInst=(e)=>{
+
+ 
+  }
 
   done = (e, i) => {
     console.log(this.state.product[i].text);
@@ -148,8 +153,10 @@ class Container extends Component {
 
   render() {
     return (
-      <div className="app-container">
+      <div id="app-container">
+        
         <div className="header">
+        <a className="fa fa-question" onClick={e=>this.showInst()}></a>
           <div className="shopper-name"><span style={{color:"#E85E00"}}>2</span>SHOP</div>
         </div>
 
@@ -196,9 +203,7 @@ class Container extends Component {
             }}
             to="/"
           >
-            <Button className="signout" onClick={this.props.handlesignOut}>
-              <div>Sign Out</div>
-            </Button>
+          <div></div>
           </LinkContainer>
         </div>
       </div>
