@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "aws-amplify": "^1.1.21",
-        "axios": "^0.18.1",
+        "axios": "^0.21.1",
         "bootstrap": "^4.3.1",
         "form-serialize": "^0.7.2",
         "heroku": "^7.22.9",
